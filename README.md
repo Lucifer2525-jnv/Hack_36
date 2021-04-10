@@ -1,4 +1,5 @@
-# Hack_36
+# Hack_36 ![image](https://user-images.githubusercontent.com/60003982/114287611-c583a900-9a85-11eb-998c-d9c693e500a5.png)
+
 A Repo of Hack36 On Women Security!
 This project is Based upon IoT and Web integrity!
 
@@ -30,3 +31,13 @@ Django
 Location API's
 Heroku
 HTML/CSS/JS
+
+********************************** Contributors **************************************
+Harshit Chaudhari
+Jay Prakash
+Anupesh Verma
+Sumant
+
+Made At:-------------->>>>>>>
+![image](https://user-images.githubusercontent.com/60003982/114287637-0a0f4480-9a86-11eb-93e3-5533dd733963.png)
+
