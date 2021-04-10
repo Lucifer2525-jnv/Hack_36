@@ -9,9 +9,9 @@ account_sid = 'AC5c02098e2b8867fc74d77cceaecd55af'
 auth_token = 'ba78dd79b097140995725d3844a31de5'
 
 class API(models.Model):
-    name = models.CharField(max_length=10)
-    phone = models.CharField(max_length=10)
-    location = models.CharField(max_length=20)
+    name = models.CharField(max_length=10,null=True)
+    phone = models.CharField(max_length=10,null=True)
+    location = models.CharField(max_length=20,null=True)
     email = models.EmailField(null=True)
     sid = models.CharField(max_length=500,null=True)
 
