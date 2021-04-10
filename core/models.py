@@ -10,7 +10,7 @@ auth_token = 'ba78dd79b097140995725d3844a31de5'
 
 class API(models.Model):
     name = models.CharField(max_length=10)
-    phone = models.IntegerField()
+    phone = models.CharField(max_length=10)
     location = models.CharField(max_length=20)
     email = models.EmailField(null=True)
     sid = models.CharField(max_length=500,null=True)
@@ -35,7 +35,7 @@ class APIViewSet(viewsets.ModelViewSet):
 @receiver(post_save, sender=API)
 def sendreport(sender, instance, **kwargs):
     client = Client(account_sid, auth_token)
-    message = client.messages.create(body='I need Help!!! I am {0} I am rightnow at {1} My phone number is {2}'.format(instance.name,instance.location,instance.phone),from_='+15085254297',to='+917999776136')
+    message = client.messages.create(body='I need Help!!! I am {0} I am rightnow at {1} My phone number is +91{2}'.format(instance.name,instance.location,instance.phone),from_='+15085254297',to='+917999776136')
     # send_mail(
     #     'Emergency',
     #     'I need Help!!! I am {0} I am rightnow at {1} My phone number is {2}'.format(instance.name,instance.location,instance.phone),
