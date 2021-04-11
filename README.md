@@ -40,7 +40,8 @@ Location API's
 Heroku
 HTML/CSS/JS
 
-
+******************** PPT *****************************
+[Hack36 2021 Final Presentation Template (1).pptx](https://github.com/Lucifer2525-jnv/Hack_36/files/6291010/Hack36.2021.Final.Presentation.Template.1.pptx)
 
 
 ********************************** Contributors **************************************
