@@ -33,7 +33,7 @@ class APIViewSet(viewsets.ModelViewSet):
 @receiver(post_save, sender=API)
 def sendreport(sender, instance, **kwargs):
     account_sid = 'AC5c02098e2b8867fc74d77cceaecd55af'
-    auth_token = 'ba78dd79b097140995725d3844a31de5'
+    auth_token = '34a3711d0d07754a176ddd1680767244'
     client = Client(account_sid, auth_token)
     message = client.messages.create(body='I need Help!!! I am {0} I am rightnow at {1} My phone number is +91{2}'.format(instance.name,instance.location,instance.phone),from_='+15085254297',to='+917999776136')
     # send_mail(
