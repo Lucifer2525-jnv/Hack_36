@@ -41,14 +41,15 @@ Heroku
 HTML/CSS/JS
 
 ******************** PPT *****************************
+
 [Hack36 2021 Final Presentation Template (1).pptx](https://github.com/Lucifer2525-jnv/Hack_36/files/6291010/Hack36.2021.Final.Presentation.Template.1.pptx)
 
 
 ********************************** Contributors **************************************
-# Harshit Chaudhari
-# Jay Prakash
-# Anupesh Verma
-# Sumant
+Harshit Chaudhari
+Jay Prakash
+Anupesh Verma
+Sumant
 
 # Made At:-------------->>>>>>>
 ![image](https://user-images.githubusercontent.com/60003982/114287637-0a0f4480-9a86-11eb-93e3-5533dd733963.png)
