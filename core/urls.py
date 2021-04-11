@@ -7,6 +7,7 @@ router = routers.DefaultRouter()
 router.register(r'users', APIViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('', home),
+    path('api/', include(router.urls)),
     path('post/<str:name>/<int:phone>/<str:email>/<str:location>/',emergency)
 ]

@@ -5,13 +5,11 @@ from django.core.mail import send_mail
 from rest_framework import routers, serializers, viewsets
 from twilio.rest import Client
 # Create your models here.
-account_sid = 'AC5c02098e2b8867fc74d77cceaecd55af'
-auth_token = 'ba78dd79b097140995725d3844a31de5'
 
 class API(models.Model):
-    name = models.CharField(max_length=10)
-    phone = models.IntegerField()
-    location = models.CharField(max_length=20)
+    name = models.CharField(max_length=10,null=True)
+    phone = models.CharField(max_length=10,null=True)
+    location = models.CharField(max_length=20,null=True)
     email = models.EmailField(null=True)
     sid = models.CharField(max_length=500,null=True)
 
@@ -34,8 +32,10 @@ class APIViewSet(viewsets.ModelViewSet):
 
 @receiver(post_save, sender=API)
 def sendreport(sender, instance, **kwargs):
+    account_sid = 'AC5c02098e2b8867fc74d77cceaecd55af'
+    auth_token = '34a3711d0d07754a176ddd1680767244'
     client = Client(account_sid, auth_token)
-    message = client.messages.create(body='I need Help!!! I am {0} I am rightnow at {1} My phone number is {2}'.format(instance.name,instance.location,instance.phone),from_='+15085254297',to='+917999776136')
+    message = client.messages.create(body='I need Help!!! I am {0} I am rightnow at {1} My phone number is +91{2}'.format(instance.name,instance.location,instance.phone),from_='+15085254297',to='+917999776136')
     # send_mail(
     #     'Emergency',
     #     'I need Help!!! I am {0} I am rightnow at {1} My phone number is {2}'.format(instance.name,instance.location,instance.phone),
